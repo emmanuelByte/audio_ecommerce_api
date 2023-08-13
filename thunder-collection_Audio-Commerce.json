@@ -1,0 +1,161 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Audio-Commerce",
+    "dateExported": "2023-08-13T22:18:58.366Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "f0498cec-c2c8-4879-9f47-92c38d8cf02b",
+            "name": "User",
+            "containerId": "",
+            "created": "2023-08-13T22:00:46.054Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "d0dd727b-1795-4967-93c0-1ee52862a2e7",
+            "name": "Category",
+            "containerId": "",
+            "created": "2023-08-13T22:02:25.406Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "e5019738-4315-4b57-89c9-0d93295973c9",
+            "name": "Product",
+            "containerId": "",
+            "created": "2023-08-13T22:02:44.312Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "f1cb4dfa-3415-4201-89af-d95cb5073eb3",
+            "colId": "700c2d74-c778-43bc-8c3f-89c32f4d497a",
+            "containerId": "d0dd727b-1795-4967-93c0-1ee52862a2e7",
+            "name": "Create Category",
+            "url": "localhost:3000/category/create",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-08-13T22:02:57.367Z",
+            "modified": "2023-08-13T22:03:50.301Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"HeadPhones\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "86813fa9-aef9-4e7e-ba37-36a1e8a1118b",
+            "colId": "700c2d74-c778-43bc-8c3f-89c32f4d497a",
+            "containerId": "e5019738-4315-4b57-89c9-0d93295973c9",
+            "name": "Create Product",
+            "url": "localhost:3000/product/create",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-08-13T22:04:09.385Z",
+            "modified": "2023-08-13T22:09:02.977Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"categoryId\": \"64d95345cf6095a452e42c6a\",\n  \"name\": \"Oraimo Headset Lite\",\n  \"description\": \"lorem\",\n  \"quantity\": 100,\n  \"price\": 20000\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d66a1bb4-9a40-4d6b-8981-32bdab497e46",
+            "colId": "700c2d74-c778-43bc-8c3f-89c32f4d497a",
+            "containerId": "e5019738-4315-4b57-89c9-0d93295973c9",
+            "name": "Get All products",
+            "url": "localhost:3000/product/all",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-08-13T22:11:39.370Z",
+            "modified": "2023-08-13T22:11:46.050Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2041d7d8-0238-4246-b2d5-03a3d15cf0f5",
+            "colId": "700c2d74-c778-43bc-8c3f-89c32f4d497a",
+            "containerId": "d0dd727b-1795-4967-93c0-1ee52862a2e7",
+            "name": "Get All Category",
+            "url": "localhost:3000/category/all",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-08-13T22:18:17.291Z",
+            "modified": "2023-08-13T22:18:27.734Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "01f04117-426c-45b1-98e1-22f454cc4934",
+            "colId": "700c2d74-c778-43bc-8c3f-89c32f4d497a",
+            "containerId": "f0498cec-c2c8-4879-9f47-92c38d8cf02b",
+            "name": "Register",
+            "url": "localhost:3000/user/register",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-08-13T22:00:46.055Z",
+            "modified": "2023-08-13T22:00:46.055Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"example1@gmail.com\",\n  \"name\":\"Example\",\n  \"country\":\"Nigeria\",\n  \"password\":\"12345\",\n  \"dob\":\"2022-01-01\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d69f9f75-84f9-4575-aade-434f2f2de4c1",
+            "colId": "700c2d74-c778-43bc-8c3f-89c32f4d497a",
+            "containerId": "f0498cec-c2c8-4879-9f47-92c38d8cf02b",
+            "name": "Login",
+            "url": "localhost:3000/user/login",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-08-13T22:00:46.055Z",
+            "modified": "2023-08-13T22:00:46.055Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"example1@gmail.com\",\n  \"password\": \"12345\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d3aa6964-56be-44bb-8fee-0848684f182d",
+            "colId": "700c2d74-c778-43bc-8c3f-89c32f4d497a",
+            "containerId": "f0498cec-c2c8-4879-9f47-92c38d8cf02b",
+            "name": "Get Profile",
+            "url": "localhost:3000/user/profile",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-08-13T22:00:46.055Z",
+            "modified": "2023-08-13T22:00:46.055Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        }
+    ]
+}
